@@ -42,12 +42,13 @@ async updateNews(){
 
 async componentDidMount(){
   // console.log("Component Did Mount");
-  let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}`;
-  this.setState({loading:true})
-  let data = await fetch(url);
-  let parsedData = await data.json()
-  console.log(parsedData);
-  this.setState({articles: parsedData.articles, totalResults: parsedData.totalResults, loading:false})
+  // let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}`;
+  // this.setState({loading:true})
+  // let data = await fetch(url);
+  // let parsedData = await data.json()
+  // console.log(parsedData);
+  // this.setState({articles: parsedData.articles, totalResults: parsedData.totalResults, loading:false})
+  this.updateNews()
 }
 
 handlePreviousClick = async ()=>{
