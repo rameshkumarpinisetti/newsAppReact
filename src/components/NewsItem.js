@@ -9,8 +9,10 @@ export class NewsItem extends Component {
     return (
         <div className='my-3'>
             <div className="card">
-            <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left: "90%" ,zIndex: "1"}}>{source}</span>
-                <img style={{maxHeight:"240px", minHeight: "240px"}} src={!imageUrl?"https://www.thedailybeast.com/resizer/v2/KNCUDVJ67FE3JLADOOPASZTFAA.gif?smart=true&auth=f2d1c18a2bcf16407546f97cb5759b99fa5a9162647d57dbc4793a1b9f1a0047&width=1200&height=630":imageUrl} className="card-img-top" alt="..." />
+            <div style={{display:'flex', justifyContent:'flex-end', position:'absolute', right:0}}>
+              <span className="badge rounded-pill bg-danger">{source}</span>
+            </div>
+            <a href={newsUrl} target="_blank" rel="noreferrer"><img style={{maxHeight:"240px", minHeight: "240px"}} src={!imageUrl?"https://www.thedailybeast.com/resizer/v2/KNCUDVJ67FE3JLADOOPASZTFAA.gif?smart=true&auth=f2d1c18a2bcf16407546f97cb5759b99fa5a9162647d57dbc4793a1b9f1a0047&width=1200&height=630":imageUrl} className="card-img-top" alt="..." /></a>
                 <div className="card-body">
                     <h5 className="card-title">{title}...</h5>
                     <p className="card-text">{description}...</p>
