@@ -50,7 +50,6 @@ async updateNews(){
 }
 
 async componentDidMount(){
-  // console.log("Component Did Mount");
   // let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=1&pageSize=${this.props.pageSize}`;
   // this.setState({loading:true})
   // let data = await fetch(url);
